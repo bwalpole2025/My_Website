@@ -66,36 +66,36 @@
 
         <aside class="signal-panel" aria-label="Live model signal panel">
           <div class="panel-topline">
-            <span>Live Phase Portrait</span>
+            <span>Plateau Border Model</span>
             <span id="clock">t = 00.00</span>
           </div>
           <div class="equation-stack">
-            <span class="math-equation" data-latex="\frac{\mathrm{d}x}{\mathrm{d}t} = \sigma\left(y - x\right)">
-              dx/dt = sigma(y - x)
+            <span class="math-equation" data-latex="\nabla^2\phi = 0">
+              Laplace equation for the velocity potential
             </span>
-            <span class="math-equation" data-latex="\frac{\mathrm{d}y}{\mathrm{d}t} = x\left(\rho - z\right) - y">
-              dy/dt = x(rho - z) - y
+            <span class="math-equation" data-latex="\eta_t + \nabla\phi\cdot\nabla\eta = \phi_n">
+              Free-surface kinematic condition
             </span>
-            <span class="math-equation" data-latex="\frac{\mathrm{d}z}{\mathrm{d}t} = xy - \beta z">
-              dz/dt = xy - beta z
+            <span class="math-equation" data-latex="\eta_t + c\,\eta_x + \alpha\eta\eta_x + \beta\eta_{xxx} = 0">
+              KdV-type weakly nonlinear evolution equation
             </span>
           </div>
           <div class="metric-grid">
             <div>
-              <span class="metric-label">Model Fit</span>
-              <strong>98.7%</strong>
+              <span class="metric-label">Geometry</span>
+              <strong>Plateau Border</strong>
             </div>
             <div>
-              <span class="metric-label">Horizon</span>
-              <strong>42 ms</strong>
+              <span class="metric-label">Wave Type</span>
+              <strong>Depression</strong>
             </div>
             <div>
-              <span class="metric-label">Noise</span>
-              <strong>0.013</strong>
+              <span class="metric-label">Linear Result</span>
+              <strong>Stable</strong>
             </div>
             <div>
-              <span class="metric-label">Stability</span>
-              <strong>High</strong>
+              <span class="metric-label">Asymptotics</span>
+              <strong>KdV</strong>
             </div>
           </div>
         </aside>
