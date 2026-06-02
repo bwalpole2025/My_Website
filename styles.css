@@ -359,7 +359,7 @@ h3 {
   align-items: start;
 }
 
-.intro > p,
+.about-copy,
 .timeline p,
 .work-item p,
 .publication-item p {
@@ -367,9 +367,17 @@ h3 {
   line-height: 1.68;
 }
 
-.intro > p {
+.about-copy {
   max-width: 43rem;
   font-size: 1.18rem;
+}
+
+.about-copy p {
+  margin-bottom: 1.1rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .work-grid {
