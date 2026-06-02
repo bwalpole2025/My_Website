@@ -68,15 +68,21 @@
           <div class="panel-topline">
             <span>Plateau Border Model</span>
           </div>
+          <figure class="model-figure">
+            <img
+              src="./assets/plateau-border-solitary-wave.png"
+              alt="Depression solitary wave propagating along a Plateau border"
+            />
+          </figure>
           <div class="equation-stack">
-            <span class="math-equation" data-latex="\nabla^2\phi = 0">
-              Laplace equation for the velocity potential
+            <span class="math-equation" data-latex="\frac{\partial\phi}{\partial t}+\frac{1}{2}\lvert\nabla\phi\rvert^2+\frac{\gamma}{\rho}\left(\nabla\cdot\hat{\mathbf n}\right)=B(t)\quad\text{on }\partial\Omega">
+              Dynamic free-surface condition
             </span>
-            <span class="math-equation" data-latex="\eta_t + \nabla\phi\cdot\nabla\eta = \phi_n">
+            <span class="math-equation" data-latex="\nabla\phi\cdot\hat{\mathbf n}=\frac{\partial\mathbf r}{\partial t}\cdot\hat{\mathbf n}\quad\text{on }\partial\Omega">
               Free-surface kinematic condition
             </span>
-            <span class="math-equation" data-latex="\eta_t + c\,\eta_x + \alpha\eta\eta_x + \beta\eta_{xxx} = 0">
-              KdV-type weakly nonlinear evolution equation
+            <span class="math-equation" data-latex="\frac{\partial\phi}{\partial r}\cos\theta-\frac{1}{r}\frac{\partial\phi}{\partial\theta}\sin\theta=0,\quad\frac{\partial\phi}{\partial r}\sin\theta+\frac{1}{r}\frac{\partial\phi}{\partial\theta}\cos\theta=0\quad\text{on }r=\nu R(z,t)">
+              Symmetry boundary condition
             </span>
           </div>
           <div class="metric-grid">

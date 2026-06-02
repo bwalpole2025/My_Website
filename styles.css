@@ -255,7 +255,8 @@ h3 {
 
 .panel-topline,
 .metric-grid,
-.equation-stack {
+.equation-stack,
+.model-figure {
   position: relative;
 }
 
@@ -272,9 +273,24 @@ h3 {
 .equation-stack {
   display: grid;
   gap: 0.65rem;
-  margin: 4rem 0 1.4rem;
+  margin: 1rem 0 1.4rem;
   color: #e9f9df;
   font-size: 1rem;
+}
+
+.model-figure {
+  margin: 1.1rem 0 0;
+  padding: 0.45rem;
+  border: 1px solid rgba(245, 247, 239, 0.12);
+  border-radius: 8px;
+  background: rgba(245, 247, 239, 0.045);
+}
+
+.model-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 .math-equation {
@@ -285,6 +301,8 @@ h3 {
   border: 1px solid rgba(142, 240, 183, 0.18);
   border-radius: 7px;
   background: rgba(5, 7, 5, 0.42);
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .math-equation .katex-display {
@@ -293,7 +311,7 @@ h3 {
 
 .math-equation .katex {
   color: #efffe7;
-  font-size: 1.08rem;
+  font-size: 0.92rem;
 }
 
 .metric-grid {
