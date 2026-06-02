@@ -1,6 +1,5 @@
 const canvas = document.querySelector("#field");
 const ctx = canvas.getContext("2d", { alpha: true });
-const clock = document.querySelector("#clock");
 const sections = document.querySelectorAll("[data-section]");
 
 let width = 0;
@@ -200,10 +199,6 @@ function animate() {
   drawGrid();
   drawTraces();
   drawParticles();
-
-  if (clock) {
-    clock.textContent = `t = ${(time * 1.7).toFixed(2).padStart(5, "0")}`;
-  }
 
   requestAnimationFrame(animate);
 }
