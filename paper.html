@@ -19,23 +19,34 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         color: var(--ink);
-        background: var(--bg);
+        background:
+          radial-gradient(circle at 15% 0%, rgba(142, 240, 183, 0.14), transparent 24rem),
+          #050705;
       }
 
       header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
         padding: 1rem clamp(1rem, 4vw, 2rem);
         border-bottom: 1px solid var(--line);
-        background: rgba(5, 7, 5, 0.88);
+        background: rgba(5, 7, 5, 0.9);
+        backdrop-filter: blur(18px);
       }
 
       h1 {
+        max-width: 48rem;
         margin: 0;
         font-size: 1rem;
         line-height: 1.35;
@@ -62,35 +73,56 @@
         border: 1px solid rgba(142, 240, 183, 0.32);
         border-radius: 8px;
         background: rgba(142, 240, 183, 0.08);
+        white-space: nowrap;
       }
 
       main {
-        height: calc(100svh - 4.6rem);
-        min-height: 32rem;
+        display: grid;
+        gap: 1.4rem;
+        max-width: 62rem;
+        margin: 0 auto;
+        padding: clamp(1rem, 4vw, 2.4rem);
       }
 
-      object,
-      iframe {
+      .paper-note {
+        margin: 0 0 0.4rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .page {
+        margin: 0;
+      }
+
+      .page img {
         display: block;
         width: 100%;
-        height: 100%;
-        border: 0;
-        background: #111;
+        height: auto;
+        border: 1px solid rgba(245, 247, 239, 0.16);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
       }
 
-      .fallback {
-        max-width: 44rem;
-        margin: 0 auto;
-        padding: 3rem 1.25rem;
+      .page figcaption {
+        padding: 0.55rem 0 0;
         color: var(--muted);
-        line-height: 1.65;
+        font-size: 0.78rem;
+        text-align: right;
+      }
+
+      @media (max-width: 680px) {
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
       }
     </style>
   </head>
   <body>
     <header>
       <h1>Stability analysis and solitary waves on Plateau border flows</h1>
-      <nav aria-label="PDF actions">
+      <nav aria-label="Paper actions">
         <a class="button" href="./index.html#publications">Back</a>
         <a
           class="button"
@@ -98,22 +130,37 @@
           download="stability-analysis-and-solitary-waves-on-plateau-border-flows.pdf"
           type="application/pdf"
         >
-          Open PDF
+          Download PDF
         </a>
       </nav>
     </header>
+
     <main>
-      <object
-        data="./assets/stability-analysis-and-solitary-waves-on-plateau-border-flows.pdf"
-        type="application/pdf"
-      >
-        <div class="fallback">
-          <p>
-            The PDF viewer did not load in this browser. Use the Open PDF button above
-            to open the attached document directly.
-          </p>
-        </div>
-      </object>
+      <p class="paper-note">
+        Browser-safe paper viewer. The PDF has been rendered as document pages so it
+        works even when local PDF plugins are blocked.
+      </p>
+      <figure class="page"><img src="./assets/paper-pages/page-01.jpg" alt="Paper page 1" loading="eager" /><figcaption>Page 1</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-02.jpg" alt="Paper page 2" loading="lazy" /><figcaption>Page 2</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-03.jpg" alt="Paper page 3" loading="lazy" /><figcaption>Page 3</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-04.jpg" alt="Paper page 4" loading="lazy" /><figcaption>Page 4</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-05.jpg" alt="Paper page 5" loading="lazy" /><figcaption>Page 5</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-06.jpg" alt="Paper page 6" loading="lazy" /><figcaption>Page 6</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-07.jpg" alt="Paper page 7" loading="lazy" /><figcaption>Page 7</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-08.jpg" alt="Paper page 8" loading="lazy" /><figcaption>Page 8</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-09.jpg" alt="Paper page 9" loading="lazy" /><figcaption>Page 9</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-10.jpg" alt="Paper page 10" loading="lazy" /><figcaption>Page 10</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-11.jpg" alt="Paper page 11" loading="lazy" /><figcaption>Page 11</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-12.jpg" alt="Paper page 12" loading="lazy" /><figcaption>Page 12</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-13.jpg" alt="Paper page 13" loading="lazy" /><figcaption>Page 13</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-14.jpg" alt="Paper page 14" loading="lazy" /><figcaption>Page 14</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-15.jpg" alt="Paper page 15" loading="lazy" /><figcaption>Page 15</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-16.jpg" alt="Paper page 16" loading="lazy" /><figcaption>Page 16</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-17.jpg" alt="Paper page 17" loading="lazy" /><figcaption>Page 17</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-18.jpg" alt="Paper page 18" loading="lazy" /><figcaption>Page 18</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-19.jpg" alt="Paper page 19" loading="lazy" /><figcaption>Page 19</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-20.jpg" alt="Paper page 20" loading="lazy" /><figcaption>Page 20</figcaption></figure>
+      <figure class="page"><img src="./assets/paper-pages/page-21.jpg" alt="Paper page 21" loading="lazy" /><figcaption>Page 21</figcaption></figure>
     </main>
   </body>
 </html>
