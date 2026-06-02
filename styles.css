@@ -513,6 +513,11 @@ h3 {
   max-width: 42rem;
 }
 
+.publication-abstract {
+  color: #d5dacd;
+  font-size: 0.98rem;
+}
+
 .publication-item p a {
   color: var(--green);
   text-decoration: underline;
